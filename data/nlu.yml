@@ -103,6 +103,11 @@ nlu:
     - Do you know who am I
     - I am ready
 
+- intent: slot_getter_name
+  - examples:
+    - My name is [Peter](name)
+    - I am [John](name)
+
 - intent: slot_getter_gender
   - examples:
     - [male](gender)
@@ -113,7 +118,6 @@ nlu:
     - [10](age)
     - [37](age)
     - [5](age)
-    - [75](age)
     - [18](age)
     - [38](age)
 

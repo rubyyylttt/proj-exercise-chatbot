@@ -11,3 +11,19 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Activate profile form
+  steps:
+  - intent: request_profile_info
+  - action: profile_form
+  - active_loop: profile_form
+
+- rule: Submit profile form
+  condition:
+  - active_loop: profile_form
+  steps:
+  - action: profile_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_remember

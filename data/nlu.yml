@@ -98,41 +98,47 @@ nlu:
     - - I am [32]{"entity": "integer", "role": "age"} years old and [163]{"entity": "integer", "role": "height"} cm tall
 
 - intent: request_profile_info
-  - examples:
+  - examples: |
     - I want to provide my profile details
     - Do you know who am I
     - I am ready
 
 - intent: slot_getter_name
-  - examples:
+  - examples: |
     - My name is [Peter](name)
     - I am [John](name)
 
 - intent: slot_getter_gender
-  - examples:
+  - examples: |
     - [male](gender)
     - [female](gender)
 
 - intent: slot_getter_age
-  - examples:
-    - [10](age)
-    - [37](age)
-    - [5](age)
+  - examples: |
+    - My age is [15](age)
+    - I am [25](age) years old
+    - [20](age) years old
     - [18](age)
-    - [38](age)
+    - [22](age)
 
 - intent: slot_getter_weight
-  - examples:
-    - [23](weight)
-    - [74](weight)
-    - [87](weight)
-    - [57](weight)
-    - [62](weight)
+  - examples: |
+    - I am [74](weight) kg
+    - My weight is [87](weight) kg
+    - I weigh [57](weight) kg
+    - I have a weight of [62](weight) kg
 
 - intent: slot_getter_height
-  - examples:
-    - [124](height)
-    - [175](height)
-    - [188](height)
-    - [158](height)
-    - [163](height)
+  - examples: |
+    - I am [124](height) cm tall
+    - My height is [175](height) cm
+    - I have a height of [188](height) 
+    - I am [158](height) centimeters tall
+    - [163](height) cm
+
+- intent: slot_getter_exercise_freq
+  - examples: |
+    - I do exercise [1](exercise_freq) a week
+    - [two](exercise_freq) times
+    - [twice](exercise_freq) a week
+    - [three](exercise_freq) exercises a week

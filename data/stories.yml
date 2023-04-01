@@ -30,6 +30,53 @@ stories:
   - action: utter_goodbye
 
 ## Introduction
+- story: Interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_profile_info
+  - action: profile_form
+  - active_loop: profile_form
+  - action: utter_ask_name
+  - slot_was_set: 
+    - requested_slot: name
+  - slot_was_set:
+    - name: Peter
+  - slot_was_set:
+    - name: Peter
+  - slot_was_set: 
+    - requested_slot: gender
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - gender: male
+  - slot_was_set: 
+    - requested_slot: age
+  - slot_was_set:
+    - age: 20
+  - slot_was_set:
+    - age: 20
+  - slot_was_set: 
+    - requested_slot: weight
+  - slot_was_set:
+    - weight: 60
+  - slot_was_set:
+    - weight: 60
+  - slot_was_set: 
+    - requested_slot: height
+  - slot_was_set:
+    - height: 180
+  
+  - intent: slot_getter_name
+  - action: utter_ask_gender
+  - intent: slot_getter_gender
+  - action: utter_ask_age
+  - intent: slot_getter_age
+  - action: utter_ask_weight
+  - intent: slot_getter_weight
+  - action: utter_ask_height
+  - intent: slot_getter_height
+
 * Bot_introduction
     - profile_form
     - form{"name":"profile_form"}

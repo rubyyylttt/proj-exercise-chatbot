@@ -28,3 +28,27 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+## Introduction
+* Bot_introduction
+    - profile_form
+    - form{"name":"profile_form"}
+    - slot{"requested_slot":"gender"}
+* inform{"gender":"male"}
+    - profile_form
+    - slot{"gender":"male"}
+    - slot{"requested_slot":"age"}
+* inform{"integer":"38"}
+    - profile_form
+    - slot{"age":"38"}
+    - slot{"requested_slot":"weight"}
+* inform{"integer":"72"}
+    - profile_form
+    - slot{"weight":"72"}
+    - slot{"requested_slot":"height"}
+* inform{"integer":"172"}
+    - profile_form
+    - slot{"height":"172"}
+    - slot{"requested_slot":null}
+    - form{"name":null}
+    - utter_slot_getter_username

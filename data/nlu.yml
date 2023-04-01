@@ -89,3 +89,46 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: inform
+  examples: |
+    - I am [20]{"entity": "integer", "role": "age"} years old
+    - [42] (integer)
+    - I'm [163]{"entity": "integer", "role": "height"} cm tall
+    - - I am [32]{"entity": "integer", "role": "age"} years old and [163]{"entity": "integer", "role": "height"} cm tall
+
+- intent: request_profile_info
+  - examples:
+    - I want to provide my profile details
+    - Do you know who am I
+    - I am ready
+
+- intent: slot_getter_gender
+  - examples:
+    - [male](gender)
+    - [female](gender)
+
+- intent: slot_getter_age
+  - examples:
+    - [10](age)
+    - [37](age)
+    - [5](age)
+    - [75](age)
+    - [18](age)
+    - [38](age)
+
+- intent: slot_getter_weight
+  - examples:
+    - [23](weight)
+    - [74](weight)
+    - [87](weight)
+    - [57](weight)
+    - [62](weight)
+
+- intent: slot_getter_height
+  - examples:
+    - [124](height)
+    - [175](height)
+    - [188](height)
+    - [158](height)
+    - [163](height)

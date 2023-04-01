@@ -48,3 +48,30 @@ policies:
 #     max_history: 5
 #     epochs: 100
 #     constrain_similarities: true
+
+
+class ProfileForm(FormAction):
+    """ Profile custom form action"""
+
+    def name(self) -> Text:
+        """Unique identifier of the form"""
+
+        return "profile_form"
+
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        """A list of required slots that the form has to fill"""
+
+        return ["gender", "age", "weight", "height"]
+    
+    def submit(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+        """ Define what the form has to do after all required slots are filled"""
+
+        # utter submit template
+        dispatcher.utter_message(text="we got it all, thanks!")
+        return []

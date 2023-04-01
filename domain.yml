@@ -29,6 +29,46 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
+
+
+
+slots:
+  gender:
+    type: unfeaturized
+    auto_fill: false
+  age:
+    type: unfeaturized
+    auto_fill: false
+  weight:
+    type: unfeaturized
+    auto_fill: false
+  height:
+    type: unfeaturized
+    auto_fill: false
+  requested_slot:
+    type: unfeaturized
+
+entities:
+  - gender
+  - age
+  - weight
+  - height
+
+responses:
+  utter_ask_gender:
+    - buttons:
+        - payload: '/inform{"gender": "male"}'
+          title: male
+        - payload: '/inform{"gender": "female"}'
+          title: female
+      text: are you a male or a female?
+  utter_ask_age:
+    - text: how old are you?
+  utter_ask_weight:
+    - text: what is your weight?
+  utter_ask_height:
+    - text: what is your height?
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

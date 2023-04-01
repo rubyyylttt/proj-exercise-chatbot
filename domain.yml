@@ -14,19 +14,20 @@ intents:
   - bot_challenge
   - request_profile_info #i want to start making my profile
   - slot_getter_name #my name is..
-  - slot_getter_gender #I am a male/ female
   - slot_getter_age #I am xx years old
   - slot_getter_weight ##my weight is xx
   - slot_getter_height # my height isxx
   - slot_getter_exercise_freq #i do exercise x times a week
+  - preferred_training # type of muscles to train
 
 entities:
   - name
-  - gender
   - age
   - weight
   - height
   - exercise_freq
+  - training_type
+  - food_eaten
 
 slots:
   name:
@@ -35,14 +36,6 @@ slots:
     mappings:
     - type: from_entity
       entity: name
-      conditions:
-      - active_loop: profile_form
-  gender:
-    type: text
-    auto_fill: false
-    mappings:
-    - type: from_entity
-      entity: gender
       conditions:
       - active_loop: profile_form
   age:
@@ -77,6 +70,14 @@ slots:
       entity: exercise_freq
       conditions:
       - active_loop: profile_form
+  training_type:
+    type: text
+    auto_fill: false
+    mappings:
+    - type: from_entity
+      entity: training_type
+      conditions:
+      - active_loop: profile_form
   ##requested_slot:
   ##  type: unfeaturized
 
@@ -84,7 +85,6 @@ forms:
   profile_form:
     required_slots:
     - name
-    - gender
     - age
     - weight
     - height
@@ -116,8 +116,6 @@ responses:
 
   utter_ask_name:
     - text: what is your name?
-  utter_ask_gender:
-    - text: are you a male or a female?
   utter_ask_age:
     - text: how old are you?
   utter_ask_weight:
@@ -129,7 +127,15 @@ responses:
   utter_remember:
     - text: Thanks. I'll keep track of that.
 
+  utter_ask_workout_type:
+    - text: what muscles do you want to train?
+  utter_addOil:
+    - text: you can do it!
+
+
 actions:
 - action_calculate_intensity
+- action_training_type
+- action_diet_suggestion
 
 

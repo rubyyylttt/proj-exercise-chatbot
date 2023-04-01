@@ -116,4 +116,50 @@ class IntensityCalculation(Action):
                 dispatcher.utter_message(text="I would suggest a workout plan of intensity {intensity}, tell me a part you want to train.")
         return[]                
 
+class DecideTrainingType(Action):
 
+    def name(self) -> Text:
+        return "action_training_type"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        training_type = next(tracker.get_latest_entity_values("training_type"),None)
+        workout = workout_db.get(training_type, None)
+
+        if not workout:
+            workout = f"I cannot recognise {training_type}. is it spelled correctly?"
+            dispatcher.utter_message(text=workout)
+            return[]
+        dispatcher.utter_message(text='you can do..')
+        dispatcher.utter_message(text=workout)
+
+
+        return[]
+
+
+class GiveDietSuggestion(Action):
+
+    def name(self) -> Text:
+        return "action_diet_suggestion"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        food_eaten = next(tracker.get_latest_entity_values("food_eaten")) #intent and entity not yet added       
+        calories = food_db.get(food_eaten, None)
+
+        if not calories:
+            workout = f"I cannot recognise {food_eaten}. is it spelled correctly?"
+            dispatcher.utter_message(text=calories)
+            return[]
+        if calories < 200:
+            dispatcher.utter_message(text="your calories in this meal is {calories}, great job, keep it up!")
+        elif calories < 400:
+            dispatcher.utter_message(text="{calories}Kcal is fine for you in this meal, enjoy!")
+        else:
+            dispatcher.utter_message(text="what a fulfilling meal with {calories} Kcal, try to eat light in your next meal")
+
+
+
+        return[]

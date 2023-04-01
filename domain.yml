@@ -12,13 +12,13 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - request_profile_info
-  - slot_getter_name
-  - slot_getter_gender
-  - slot_getter_age
-  - slot_getter_weight
-  - slot_getter_height
-  - slot_getter_exercise_freq
+  - request_profile_info #i want to start making my profile
+  - slot_getter_name #my name is..
+  - slot_getter_gender #I am a male/ female
+  - slot_getter_age #I am xx years old
+  - slot_getter_weight ##my weight is xx
+  - slot_getter_height # my height isxx
+  - slot_getter_exercise_freq #i do exercise x times a week
 
 entities:
   - name
@@ -26,6 +26,7 @@ entities:
   - age
   - weight
   - height
+  - exercise_freq
 
 slots:
   name:
@@ -37,7 +38,7 @@ slots:
       conditions:
       - active_loop: profile_form
   gender:
-    type: unfeaturized
+    type: text
     auto_fill: false
     mappings:
     - type: from_entity
@@ -45,7 +46,7 @@ slots:
       conditions:
       - active_loop: profile_form
   age:
-    type: unfeaturized
+    type: text
     auto_fill: false
     mappings:
     - type: from_entity
@@ -53,7 +54,7 @@ slots:
       conditions:
       - active_loop: profile_form
   weight:
-    type: unfeaturized
+    type: text
     auto_fill: false
     mappings:
     - type: from_entity
@@ -61,7 +62,7 @@ slots:
       conditions:
       - active_loop: profile_form
   height:
-    type: unfeaturized
+    type: text
     auto_fill: false
     mappings:
     - type: from_entity
@@ -69,7 +70,7 @@ slots:
       conditions:
       - active_loop: profile_form
   exercise_freq:
-    type: unfeaturized
+    type: text
     auto_fill: false
     mappings:
     - type: from_entity

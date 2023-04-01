@@ -102,6 +102,7 @@ nlu:
     - I want to provide my profile details
     - Do you know who am I
     - I am ready
+    - I want to make my profile
 
 - intent: slot_getter_name
   - examples: |

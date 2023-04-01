@@ -45,14 +45,30 @@ workout_db = {
             'Bulgarian split squats 3*10 reps \n Barbell hip thrusts 3*10 reps \n Leg press - 3*15 reps \n Seated calf raises 2*15 reps',\
                 'Barbell front squats - 4*8 reps \n Barbell lunges 4*8 reps \n Leg press - 3*15 reps \n Standing calf raises 3*15 reps',\
                     'Barbell back squats 5*5 reps \n Deadlifts 5*5 reps \n Leg press 4*15 reps \n Donkey calf raises 3*20 reps'],
+    
     'arm':['Bicep curls with dumbbells 2*15 reps \n Tricep extensions with dumbbells - 2*15 reps \n Standing dumbbell curls 2*15 reps \n Overhead tricep extensions with dumbbells 2*15 reps',\
         'Hammer curls with dumbbells 3*12 reps \n Close-grip bench press with barbell 3*12 reps \n Cable bicep curls 3*12 reps \n Tricep pushdowns with cable machine 3*12 reps',\
             'Barbell curls 4*10 reps \n Skull crushers with EZ bar 4*10 reps \n Preacher curls with dumbbells 4*10 reps \n Cable tricep extensions with rope attachment 4*10 reps',\
-                '',''],
-    'back':['','','','',''],
-    'hip':['','','','',''],
-    'core':['','','','',''],
-    'cardio':['','','','','']
+                'Incline bench dumbbell curls 5*8 reps \n Tricep dips 5*8 reps \n Concentration curls with dumbbell 5*8 reps \n Overhead dumbbell tricep extensions 5*8 reps',\
+                    'Close-grip chin-ups 6*6 reps \n Close-grip push-ups 6*6 \n Alternating dumbbell curls with heavy weights 6*6 reps \n Tricep kickbacks with dumbbells 6*6 reps'],
+    
+    'back':['Lat pulldowns 2*15 reps \n Seated cable rows 2*15 reps \n Dumbbell rows 2*15 reps \n Back extensions 2*15 reps',\
+        'T-bar rows 3*12 reps \n Single-arm dumbbell rows 3*12 reps \n Wide-grip lat pulldowns 3*12 reps \n Seated cable rows with V-bar attachment 3*12 reps',\
+            'Barbell bent-over rows 4*10 reps \n Close-grip lat pulldowns 4*10 reps \n Cable face pulls 4*10 reps \n Hyperextensions 4*10 reps',\
+                'Deadlifts 5*8 reps \n Weighted chin-ups 5*8 reps \n Cable rows with rope attachment 5*8 reps \n Wide-grip pull-ups 5*8 reps',\
+                    'Rack pulls 6*6 reps \n Barbell rows with supinated grip 6*6 reps \n One-arm dumbbell rows with heavy weights 6*6 reps \n Weighted hyperextensions - 6*6 reps'],
+    
+    'hip':['Glute bridges 2*15 reps \n Clamshells 2*15 reps \n Standing leg lifts 2*15 reps \n Fire hydrants 2*15 reps',\
+        'Cable kickbacks 3*12 reps \n Hip thrusts with barbell 3*12 reps \n Side-lying leg lifts with ankle weights 3*12 reps \n Kettlebell swings 3*12 reps',\
+            'Bulgarian split squats with dumbbells 4*10 reps \n Barbell hip thrusts with resistance band 4*10 reps \n Cable pull-throughs 4*10 reps \n Curtsy lunges with dumbbells 4*10 reps',\
+                'Romanian deadlifts with barbell 5*8 reps \n Hip abductions with resistance band  5*8 reps \n Single-leg glute bridges with barbell 5*8 reps \n Reverse lunges with dumbbells 5*8 reps',\
+                    'Sumo deadlifts with barbell 6*6 reps \n Barbell hip thrusts with heavy weights 6*6 reps \n Single-leg Romanian deadlifts with dumbbells 6*6 reps \n Pistol squats with bodyweight 6*6 reps'],
+    
+    'core':['Warm up with 5-10 minutes of jogging in place \n Perform 3*15 reps of crunches. \n Perform 3*15 reps of leg raises. \n Perform 3*60 seconds of plank.',\
+        'Warm up with 5-10 minutes of jumping jacks \n Perform 3*15 reps of bicycle crunches. \n Perform 3*15 reps of Russian twists \n Perform 3*60 seconds of side plank',
+        'Warm up with 5-10 minutes of jump rope \n Perform 3*15 reps of hanging leg raises \n Perform 3*15 reps of weighted decline sit-ups \n Perform 3*60 seconds of weighted plank.',\
+            'Warm up with 5-10 minutes of burpees \n Perform 3*15 reps of dragon flags \n Perform 3*15 reps of cable crunches \n Perform 3860 seconds of single-arm plank on each side.',\
+                'Warm up with 5-10 min of mountain climbers \n Perform 3*15 reps of hanging windshield wipers \n Perform 3*15 reps of ab wheel rollouts \n Perform 3*60 seconds of Swiss ball pike.']
 }
 
 class IntensityCalculation(Action):

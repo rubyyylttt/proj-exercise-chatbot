@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"name": "Lab1_Chatbot_Rasa",
+			"path": "../../Lab1_Chatbot_Rasa"
+		}
+	],
+	"settings": {}
+}
